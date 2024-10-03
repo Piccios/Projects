@@ -1,0 +1,72 @@
+$primary-color: rgb(106, 200, 241);
+$secondary-color: rgb(252, 187, 107);
+$accent-color: rgb(249, 149, 102);
+$highlight-color: rgb(204, 36, 109);
+$background-color: rgb(249, 245, 229);
+$header-menu-color: rgb(21, 39, 74);
+
+body {
+    background-color: $background-color;
+    color: $header-menu-color;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: $header-menu-color;
+    padding: 1rem;
+
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    a {
+        text-decoration: none;
+        color: $background-color;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    text-align: center;
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        color: $primary-color;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: $accent-color;
+    }
+}
+
+button {
+    background-color: $secondary-color;
+    border: none;
+    padding: 10px 20px;
+    color: $header-menu-color;
+    cursor: pointer;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: $primary-color;
+    }
+}
