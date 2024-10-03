@@ -9,7 +9,7 @@
             };
         },
         created(){
-            this.links =links;
+            this.links = links;
         }
     };
 </script>
@@ -32,14 +32,18 @@
 </template>
 
 <style scoped lang="scss">
+
 nav {
-        padding: 1rem;
+    
+    padding: 1rem;
+
     ul {
         list-style: none;
         display: flex;
         justify-content: space-around;
         color: white;
     }
+
     a {
         text-decoration: none;
         color: #333;
