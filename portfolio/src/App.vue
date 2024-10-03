@@ -1,27 +1,52 @@
-<script setup>
-import MainPage from './components/MainPage.vue'
+<script>
+    import links from './assets/menuLinks.json'
+
+    export default {
+        name: "App",
+        data() {
+            return{
+                links: []
+            };
+        },
+        created(){
+            this.links =links;
+        }
+    };
 </script>
 
 <template>
-  <header>
-
-  </header>
-  <main>
-    <MainPage />
-  </main>
+    <div id="app">
+        <header>
+            <nav>
+                <ul>
+                    <li v-for="link in links" :key="link.path">
+                        <router-link :to="link.path">{{ link.name }}</router-link>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <router-view></router-view>
+        </main>
+    </div>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+<style scoped lang="scss">
+nav {
+        padding: 1rem;
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        color: white;
+    }
+    a {
+        text-decoration: none;
+        color: #333;
+
+        &:hover {
+        color: #007bff;
+        }
+    }
+    }
 </style>
