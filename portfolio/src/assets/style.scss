@@ -5,6 +5,10 @@ $highlight-color: rgb(204, 36, 109);
 $background-color: rgb(249, 245, 229);
 $header-menu-color: rgb(21, 39, 74);
 
+#app{
+    font-family: "Afacad Flux" ;
+}
+
 body {
     background-color: $background-color;
     color: $header-menu-color;

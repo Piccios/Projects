@@ -1,52 +1,35 @@
-<script>
-    import links from './assets/menuLinks.json'
 
-    export default {
-        name: "App",
-        data() {
-            return{
-                links: []
-            };
-        },
-        created(){
-            this.links =links;
-        }
-    };
+<script>
+  import AppHeader from './components/AppHeader.vue';
+
+
+  export default {
+    data() {
+      return {
+        title: 'Portfolio',
+      }
+    },
+    name: 'App',
+    components: {
+      AppHeader
+    }
+  }
 </script>
 
 <template>
     <div id="app">
-        <header>
-            <nav>
-                <ul>
-                    <li v-for="link in links" :key="link.path">
-                        <router-link :to="link.path">{{ link.name }}</router-link>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <router-view></router-view>
-        </main>
+      <AppHeader />
+      <router-view></router-view>
     </div>
 </template>
 
-<style scoped lang="scss">
-nav {
-        padding: 1rem;
-    ul {
-        list-style: none;
-        display: flex;
-        justify-content: space-around;
-        color: white;
-    }
-    a {
-        text-decoration: none;
-        color: #333;
-
-        &:hover {
-        color: #007bff;
-        }
-    }
-    }
+<style>
+  #app {
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
 </style>
+
