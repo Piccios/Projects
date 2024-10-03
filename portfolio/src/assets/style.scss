@@ -5,19 +5,24 @@ $highlight-color: rgb(204, 36, 109);
 $background-color: rgb(249, 245, 229);
 $header-menu-color: rgb(21, 39, 74);
 
-#app{
-    font-family: "Afacad Flux" ;
-}
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
 
 body {
-    background-color: $background-color;
-    color: $header-menu-color;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: 'Afacad Flux', sans-serif;
+    }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Afacad Flux', sans-serif;
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Afacad Flux', sans-serif;
+    font-weight: 400;
 }
 
 nav {
+    color: white;
     background-color: $header-menu-color;
     padding: 1rem;
 
@@ -29,7 +34,7 @@ nav {
 
     a {
         text-decoration: none;
-        color: $background-color;
+        
 
         &:hover {
             color: $primary-color;
@@ -37,30 +42,6 @@ nav {
     }
 }
 
-.home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
-    text-align: center;
-
-    .profile-pic {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        margin-bottom: 1rem;
-    }
-
-    h1 {
-        font-size: 2rem;
-        color: $primary-color;
-    }
-
-    p {
-        font-size: 1.2rem;
-        color: $accent-color;
-    }
-}
 
 button {
     background-color: $secondary-color;

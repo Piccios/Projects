@@ -25,28 +25,24 @@
                 </ul>
             </nav>
         </header>
-        <main>
-            <router-view></router-view>
-        </main>
     </div>
 </template>
 
 <style scoped lang="scss">
 
 nav {
-    
+
     padding: 1rem;
 
     ul {
         list-style: none;
         display: flex;
         justify-content: space-around;
-        color: white;
     }
 
     a {
         text-decoration: none;
-        color: #333;
+        color: white;
 
         &:hover {
         color: #007bff;

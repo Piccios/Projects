@@ -1,11 +1,12 @@
+
 <script>
 
 </script>
 
 <template>
-    <h1>Contacts</h1>
+    <h1>Progects</h1>
 </template>
 
-<style scoped lang="scss">
+<style scoped leng="scss">
 
 </style>
